@@ -6,12 +6,12 @@ namespace GalloTube.Models;
 public class VideoTag
 {
     [Key, Column(Order = 1)]
-    public int MovieId { get; set; }
+    public int VideoId { get; set; }
     [ForeignKey("VideoId")]
-    public Movie Movie { get; set; }
+    public Video Video { get; set; }
 
     [Key, Column(Order = 2)]
-    public byte GenreId { get; set; }
+    public byte TagId { get; set; }
     [ForeignKey("TagId")]
-    public Genre Genre { get; set; }
+    public Tag Tag { get; set; }
 }
